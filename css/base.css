@@ -1,0 +1,122 @@
+:root {
+  --mw-bg: #000000;
+  --mw-panel: #0f131a;
+  --mw-panel-soft: #0b0f19;
+  --mw-border: #1c2230;
+  --mw-accent: #5ea0ff;
+  --mw-accent-soft: #3a7bff;
+  --mw-text: #e8edf1;
+  --mw-sub: #aab6c7;
+  --spacer-height: 20px;
+  --image-height: 275px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--mw-bg);
+  color: var(--mw-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(94, 160, 255, 0.3);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-area img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, var(--mw-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--mw-sub);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--mw-accent);
+}
+
+.footer {
+  border-top: 1px solid rgba(94, 160, 255, 0.2);
+  padding: 32px 0 24px;
+  font-size: 0.85rem;
+  color: var(--mw-sub);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-content span {
+    width: 100%;
+  }
+}
