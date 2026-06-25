@@ -7,8 +7,6 @@
   --mw-accent-soft: #3a7bff;
   --mw-text: #e8edf1;
   --mw-sub: #aab6c7;
-  --spacer-height: 20px;
-  --image-height: 275px;
 }
 
 * {
@@ -97,6 +95,16 @@ body {
   gap: 16px;
 }
 
+.footer-privacy {
+  color: var(--mw-sub);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer-privacy:hover {
+  color: var(--mw-accent);
+}
+
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
@@ -116,7 +124,8 @@ body {
     gap: 8px;
   }
 
-  .footer-content span {
+  .footer-content span,
+  .footer-content .footer-privacy {
     width: 100%;
   }
 }
