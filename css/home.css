@@ -33,6 +33,26 @@
   pointer-events: none;
 }
 
+.mw-path-anchor {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mw-path-anchor--top {
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.mw-path-anchor--bottom,
+.mw-path-anchor--team-bottom {
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
 .mw-hero-inner {
   position: relative;
   border-radius: 26px;
@@ -299,6 +319,7 @@
 }
 
 .mw-team-shell {
+  position: relative;
   background: var(--mw-panel);
   border-radius: 18px;
   border: 1px solid var(--mw-border);

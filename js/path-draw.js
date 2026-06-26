@@ -7,6 +7,7 @@
   var origin = document.querySelector('.mw-path-origin');
   var pathEnd = document.querySelector('.mw-path-end');
   var heroShell = document.querySelector('.mw-hero-shell');
+  var teamShell = document.querySelector('.mw-team-shell');
   var pricingShell = document.querySelector('.mw-pricing-shell');
   if (!paths.length) return;
 
@@ -17,6 +18,16 @@
   var CYCLE_MS = 3000;
   var HIGHLIGHT_HALF = 36;
   var SEGMENT_SAMPLES = 10;
+
+  var SECTION_ANCHORS = [
+    '.mw-team-shell .mw-path-anchor--team-bottom',
+    '.mw-review-row--about .mw-about-card .mw-path-anchor--top',
+    '.mw-review-row--about .mw-about-card .mw-path-anchor--bottom',
+    '.mw-flow-block--center .mw-about-card .mw-path-anchor--top',
+    '.mw-flow-block--center .mw-about-card .mw-path-anchor--bottom',
+    '.mw-review-row--why .mw-about-card .mw-path-anchor--top',
+    '.mw-review-row--why .mw-about-card .mw-path-anchor--bottom'
+  ];
 
   var active = null;
   var len = 0;
@@ -42,6 +53,10 @@
 
   function clamp01(v) {
     return v < 0 ? 0 : (v > 1 ? 1 : v);
+  }
+
+  function fmt(n) {
+    return n.toFixed(2);
   }
 
   function toViewBox(px, py) {
@@ -77,25 +92,61 @@
     return toViewBox(px, py);
   }
 
+  function anchorCoords(el) {
+    var wrapRect = wrap.getBoundingClientRect();
+    var rect = el.getBoundingClientRect();
+    var px = rect.left + rect.width / 2 - wrapRect.left;
+    var py = rect.top + rect.height / 2 - wrapRect.top;
+    return toViewBox(px, py);
+  }
+
+  function collectAnchorPoints(selectors) {
+    var points = [];
+    for (var i = 0; i < selectors.length; i++) {
+      var el = wrap.querySelector(selectors[i]);
+      if (el) points.push(anchorCoords(el));
+    }
+    return points;
+  }
+
+  // Cubic with vertical tangents at both ends: the line leaves p0 going
+  // straight down and arrives at p1 going straight down, so cards are
+  // entered/exited cleanly and consecutive segments join without kinks.
+  function smoothVertical(p0, p1, ease) {
+    var k = ease == null ? 0.5 : ease;
+    var dy = p1.y - p0.y;
+    var c1y = p0.y + dy * k;
+    var c2y = p1.y - dy * k;
+    return ' C ' + fmt(p0.x) + ' ' + fmt(c1y) + ', ' +
+           fmt(p1.x) + ' ' + fmt(c2y) + ', ' +
+           fmt(p1.x) + ' ' + fmt(p1.y);
+  }
+
+  function chainFromIndex(points, fromIdx, e) {
+    if (!points.length) return '';
+    var d = '';
+    for (var i = fromIdx; i < points.length - 1; i++) {
+      d += smoothVertical(points[i], points[i + 1]);
+    }
+    d += smoothVertical(points[points.length - 1], e);
+    return d;
+  }
+
   function pathD(el) {
     var o = originCoords();
     var e = endCoords();
-    var joinY = o.y + DROP;
-    var tail = el.getAttribute('data-tail') || '';
-    var prefix = 'M ' + o.x.toFixed(2) + ' ' + o.y.toFixed(2) +
-                 ' L ' + o.x.toFixed(2) + ' ' + joinY.toFixed(2) + ' ' + tail;
-    var isMobile = el.classList.contains('mw-deco-line-mobile');
-    if (isMobile) {
-      var MOBILE_TAIL_END_Y = 700;
-      var c1y = e.y <= MOBILE_TAIL_END_Y ? e.y : (MOBILE_TAIL_END_Y + e.y) * 0.5;
-      var c2y = e.y <= MOBILE_TAIL_END_Y ? e.y : MOBILE_TAIL_END_Y + (e.y - MOBILE_TAIL_END_Y) * 0.7;
-      return prefix + ' C 18 ' + c1y.toFixed(2) + ', 12 ' + c2y.toFixed(2) + ', ' +
-             e.x.toFixed(2) + ' ' + e.y.toFixed(2);
+    var join = { x: o.x, y: o.y + DROP };
+    var points = collectAnchorPoints(SECTION_ANCHORS);
+
+    var d = 'M ' + fmt(o.x) + ' ' + fmt(o.y) +
+            ' L ' + fmt(join.x) + ' ' + fmt(join.y);
+
+    if (!points.length) {
+      return d + smoothVertical(join, e);
     }
-    var TAIL_END_Y = 640;
-    var approachY = e.y <= TAIL_END_Y ? e.y : TAIL_END_Y + (e.y - TAIL_END_Y) * 0.6;
-    return prefix + ' S 50 ' + approachY.toFixed(2) + ', ' +
-           e.x.toFixed(2) + ' ' + e.y.toFixed(2);
+
+    d += smoothVertical(join, points[0]);
+    return d + chainFromIndex(points, 0, e);
   }
 
   function buildPaths() {
@@ -109,13 +160,13 @@
     var start = Math.max(0, atLen - halfLen);
     var end = Math.min(totalLen, atLen + halfLen);
     if (end - start < 0.5) return '';
-    var d = '';
+    var seg = '';
     for (var i = 0; i <= SEGMENT_SAMPLES; i++) {
       var t = start + (end - start) * (i / SEGMENT_SAMPLES);
       var pt = pathEl.getPointAtLength(t);
-      d += (i === 0 ? 'M ' : ' L ') + pt.x.toFixed(2) + ' ' + pt.y.toFixed(2);
+      seg += (i === 0 ? 'M ' : ' L ') + pt.x.toFixed(2) + ' ' + pt.y.toFixed(2);
     }
-    return d;
+    return seg;
   }
 
   function updateSegmentGlow(atLen) {
@@ -213,7 +264,16 @@
     var ro = new ResizeObserver(onLayoutChange);
     ro.observe(wrap);
     if (heroShell) ro.observe(heroShell);
+    if (teamShell) ro.observe(teamShell);
     if (pricingShell) ro.observe(pricingShell);
+    var aboutCards = wrap.querySelectorAll(
+      '.mw-review-row--about .mw-about-card, ' +
+      '.mw-flow-block--center .mw-about-card, ' +
+      '.mw-review-row--why .mw-about-card'
+    );
+    for (var c = 0; c < aboutCards.length; c++) {
+      ro.observe(aboutCards[c]);
+    }
   }
 
   if (document.fonts && document.fonts.ready) {
