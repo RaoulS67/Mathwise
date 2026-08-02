@@ -1,0 +1,22 @@
+{
+  "title": "Polish: unverified quotes",
+  "question": "PRODUCT.md says the home quotes aren’t confirmed evidence. How should polish handle them?",
+  "steer": true,
+  "options": [
+    {
+      "id": "remove",
+      "kicker": "RECOMMENDED",
+      "label": "Remove the quote cards",
+      "thesis": "Drop both review cards so nothing reads as social proof until you have real ones.",
+      "case": "Clears the P0 integrity issue cleanly; About / Why keep their content.",
+      "risk": "Pages lose visual balance in those rows until you add real quotes later."
+    },
+    {
+      "id": "keep",
+      "label": "Leave quotes as they are",
+      "thesis": "Keep the cards for now; polish everything else.",
+      "case": "Only if you’re about to replace them with real testimonials soon.",
+      "risk": "Parents may still treat unconfirmed quotes as proof."
+    }
+  ]
+}

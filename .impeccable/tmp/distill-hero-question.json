@@ -1,0 +1,32 @@
+{
+  "title": "Distill the homepage hero",
+  "question": "Primary job is one: get a North Shore parent to book the free trial. What’s the right cut?",
+  "steer": true,
+  "options": [
+    {
+      "id": "recommended",
+      "kicker": "RECOMMENDED",
+      "label": "One story, one action",
+      "thesis": "Keep headline + short sub + image + CTA. Drop the checklist and social from the first viewport.",
+      "case": "Checklist restates the sub; social is student-channel noise next to the only conversion action.",
+      "risk": "Parents lose the three proof bullets until they scroll into team/about.",
+      "viewport": "Title · one supporting sentence · image · Book free trial"
+    },
+    {
+      "id": "keep-proof",
+      "label": "Keep proof, lose social",
+      "thesis": "Trim the checklist to two non-overlapping points; move or remove social; put CTA next to the copy.",
+      "case": "Parents still get the HSC-tutor + flexibility claims without competing icons.",
+      "risk": "Still denser than a true distill; first viewport stays busy.",
+      "viewport": "Title · short sub · two ticks · CTA · image"
+    },
+    {
+      "id": "visual-only",
+      "label": "Visual quiet only",
+      "thesis": "Keep all copy blocks; only strip decorative noise (dead TikTok, extra footer wrapper, soften competing styles).",
+      "case": "Safest if you want the persuasion stack intact.",
+      "risk": "Doesn’t fix cognitive load — still three messages before the action.",
+      "viewport": "Same structure, quieter chrome"
+    }
+  ]
+}

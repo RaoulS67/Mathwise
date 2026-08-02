@@ -59,11 +59,13 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--mw-accent);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   margin: 8px 0 16px;
 }
-.offer-badge i {
-  margin-right: 6px;
+.offer-badge .mw-icon {
   color: #facc15;
 }
 .pricing-card ul {
@@ -78,12 +80,16 @@
   gap: 10px;
   color: var(--mw-sub);
 }
-.pricing-card li i {
+.pricing-card li .mw-icon {
   color: #4ade80;
-  width: 20px;
+  width: 1.1em;
+  height: 1.1em;
 }
 .pricing-card .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: linear-gradient(120deg, var(--mw-accent), var(--mw-accent-soft));
   color: #020617;
   text-decoration: none;
@@ -92,9 +98,14 @@
   font-weight: 700;
   margin-top: 8px;
   transition: transform 0.2s;
+  min-height: 44px;
 }
 .pricing-card .btn:hover {
   transform: scale(1.02);
+}
+.pricing-card .btn:focus-visible {
+  outline: 2px solid var(--mw-accent);
+  outline-offset: 3px;
 }
 .footnote {
   text-align: center;
@@ -104,12 +115,24 @@
   border-top: 1px solid rgba(94,160,255,0.2);
   padding-top: 32px;
 }
-.footnote i {
+.footnote .mw-icon {
   color: #facc15;
+  margin-right: 4px;
 }
 
 .footer {
   margin-top: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card,
+  .pricing-card .btn {
+    transition: none;
+  }
+  .pricing-card:hover,
+  .pricing-card .btn:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 1000px) {

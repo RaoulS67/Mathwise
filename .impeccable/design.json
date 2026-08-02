@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-02T05:15:00.000Z",
+  "title": "Design System: MathWise",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#5ea0ff",
+        "tonalRamp": [
+          "#0a1a33",
+          "#123056",
+          "#1c4a82",
+          "#2a66b8",
+          "#3a7bff",
+          "#5ea0ff",
+          "#93c0ff",
+          "#d6e8ff"
+        ]
+      },
+      "signal-blue-deep": {
+        "role": "primary",
+        "displayName": "Signal Blue Deep",
+        "canonical": "#3a7bff",
+        "tonalRamp": [
+          "#071226",
+          "#0f2448",
+          "#18386e",
+          "#24529a",
+          "#3a7bff",
+          "#5b94ff",
+          "#8fb5ff",
+          "#d2e2ff"
+        ]
+      },
+      "void-black": {
+        "role": "neutral",
+        "displayName": "Void Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#05070c",
+          "#0b0f19",
+          "#0f131a",
+          "#1c2230",
+          "#3a4558",
+          "#6b778a",
+          "#aab6c7"
+        ]
+      },
+      "bg-wash": {
+        "role": "neutral",
+        "displayName": "Canvas Wash",
+        "canonical": "rgba(94, 160, 255, 0.14)",
+        "tonalRamp": [
+          "rgba(94, 160, 255, 0.06)",
+          "rgba(94, 160, 255, 0.09)",
+          "rgba(94, 160, 255, 0.14)",
+          "rgba(94, 160, 255, 0.22)",
+          "rgba(94, 160, 255, 0.35)",
+          "#5ea0ff",
+          "#93c0ff",
+          "#d6e8ff"
+        ]
+      },
+      "bg-wash-soft": {
+        "role": "neutral",
+        "displayName": "Canvas Wash Soft",
+        "canonical": "rgba(94, 160, 255, 0.09)",
+        "tonalRamp": [
+          "rgba(94, 160, 255, 0.04)",
+          "rgba(94, 160, 255, 0.06)",
+          "rgba(94, 160, 255, 0.09)",
+          "rgba(94, 160, 255, 0.14)",
+          "rgba(94, 160, 255, 0.22)",
+          "#5ea0ff",
+          "#93c0ff",
+          "#d6e8ff"
+        ]
+      },
+      "panel-ink": {
+        "role": "neutral",
+        "displayName": "Panel Ink",
+        "canonical": "#0f131a",
+        "tonalRamp": [
+          "#05070c",
+          "#0b0f19",
+          "#0f131a",
+          "#161c28",
+          "#1c2230",
+          "#2a3344",
+          "#4a5568",
+          "#8a96a8"
+        ]
+      },
+      "panel-soft": {
+        "role": "neutral",
+        "displayName": "Panel Soft",
+        "canonical": "#0b0f19",
+        "tonalRamp": [
+          "#05070c",
+          "#0b0f19",
+          "#101623",
+          "#161c28",
+          "#1c2230",
+          "#2a3344",
+          "#4a5568",
+          "#8a96a8"
+        ]
+      },
+      "night-slate": {
+        "role": "neutral",
+        "displayName": "Night Slate",
+        "canonical": "#020617",
+        "tonalRamp": [
+          "#020617",
+          "#0b1220",
+          "#111827",
+          "#1e293b",
+          "#334155",
+          "#64748b",
+          "#94a3b8",
+          "#e2e8f0"
+        ]
+      },
+      "border-ink": {
+        "role": "neutral",
+        "displayName": "Border Ink",
+        "canonical": "#1c2230",
+        "tonalRamp": [
+          "#0b0f19",
+          "#121824",
+          "#1c2230",
+          "#2a3344",
+          "#3a4558",
+          "#5a6578",
+          "#8a96a8",
+          "#c5ced9"
+        ]
+      },
+      "mist-text": {
+        "role": "neutral",
+        "displayName": "Mist Text",
+        "canonical": "#e8edf1",
+        "tonalRamp": [
+          "#4a5568",
+          "#6b778a",
+          "#8a96a8",
+          "#aab6c7",
+          "#c5ced9",
+          "#d4e0f5",
+          "#e8edf1",
+          "#f8fafc"
+        ]
+      },
+      "cool-sub": {
+        "role": "neutral",
+        "displayName": "Cool Sub",
+        "canonical": "#aab6c7",
+        "tonalRamp": [
+          "#3a4558",
+          "#4a5568",
+          "#6b778a",
+          "#8a96a8",
+          "#aab6c7",
+          "#c5ced9",
+          "#d4e0f5",
+          "#e8edf1"
+        ]
+      },
+      "success-mint": {
+        "role": "tertiary",
+        "displayName": "Success Mint",
+        "canonical": "#4ade80",
+        "tonalRamp": [
+          "#052e16",
+          "#14532d",
+          "#166534",
+          "#16a34a",
+          "#22c55e",
+          "#4ade80",
+          "#86efac",
+          "#dcfce7"
+        ]
+      },
+      "star-amber": {
+        "role": "tertiary",
+        "displayName": "Star Amber",
+        "canonical": "#ffd166",
+        "tonalRamp": [
+          "#422006",
+          "#713f12",
+          "#a16207",
+          "#ca8a04",
+          "#eab308",
+          "#ffd166",
+          "#fde68a",
+          "#fef9c3"
+        ]
+      },
+      "pure-white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#6b778a",
+          "#8a96a8",
+          "#aab6c7",
+          "#c5ced9",
+          "#e8edf1",
+          "#f1f5f9",
+          "#f8fafc",
+          "#ffffff"
+        ]
+      },
+      "star-amber-bright": {
+        "role": "tertiary",
+        "displayName": "Star Amber Bright",
+        "canonical": "#facc15",
+        "tonalRamp": [
+          "#422006",
+          "#713f12",
+          "#a16207",
+          "#ca8a04",
+          "#eab308",
+          "#facc15",
+          "#fde047",
+          "#fef9c3"
+        ]
+      },
+      "team-tagline": {
+        "role": "neutral",
+        "displayName": "Team Tagline",
+        "canonical": "#d4e0f5",
+        "tonalRamp": [
+          "#4a5568",
+          "#6b778a",
+          "#8a96a8",
+          "#aab6c7",
+          "#c5ced9",
+          "#d4e0f5",
+          "#e8edf1",
+          "#f8fafc"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page and major section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and team titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Supporting parent-facing copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase eyebrow pills with wide tracking."
+      },
+      "headline-lg": {
+        "displayName": "Headline LG",
+        "purpose": "Pricing display prices and oversized page titles."
+      },
+      "title-xl": {
+        "displayName": "Title XL",
+        "purpose": "Pricing tier and large card titles (~1.8rem)."
+      },
+      "body-xl": {
+        "displayName": "Body XL",
+        "purpose": "Emphasized supporting lines (~1.2rem)."
+      },
+      "body-review": {
+        "displayName": "Body Review",
+        "purpose": "Quote card body copy (~0.98rem)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-shell",
+        "value": "0 24px 60px rgba(0,0,0,0.95), 0 0 40px rgba(46,144,255,0.35)",
+        "purpose": "Primary marketing stage glow."
+      },
+      {
+        "name": "cta-shell",
+        "value": "0 18px 40px rgba(0,0,0,0.9)",
+        "purpose": "Closing conversion stage."
+      },
+      {
+        "name": "review-card",
+        "value": "0 16px 40px rgba(12, 30, 66, 0.45)",
+        "purpose": "Soft lift on quote cards."
+      },
+      {
+        "name": "pricing-hover",
+        "value": "0 20px 40px rgba(0,0,0,0.6)",
+        "purpose": "Hover invitation on pricing cards."
+      },
+      {
+        "name": "cta-glow",
+        "value": "0 12px 24px -8px rgba(59,130,246,0.4)",
+        "purpose": "Primary button bloom."
+      },
+      {
+        "name": "path-stroke",
+        "value": "drop-shadow(0 0 6px rgba(94,160,255,0.6))",
+        "purpose": "Signature path energy."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-soft",
+        "value": "0.2s ease",
+        "purpose": "Default hover and color transitions."
+      },
+      {
+        "name": "hero-in",
+        "value": "0.7s ease-out",
+        "purpose": "Hero entrance."
+      },
+      {
+        "name": "card-fade",
+        "value": "0.6s ease-out",
+        "purpose": "About/review card fade-up."
+      },
+      {
+        "name": "hover-lift",
+        "value": "transform 0.16s ease",
+        "purpose": "CTA hover lift/scale."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "footer-stack",
+        "value": "700px"
+      },
+      {
+        "name": "nav-stack",
+        "value": "900px"
+      },
+      {
+        "name": "pricing-tighten",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Soft pill CTA used on the home hero.",
+      "html": "<button class=\"ds-btn-primary\">Book free trial lesson</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#5ea0ff;color:#020617;border:none;padding:14px 28px;border-radius:999px;font-weight:700;font-size:1rem;box-shadow:0 10px 28px -10px rgba(94,160,255,0.55);transition:background 0.2s ease,transform 0.2s ease;cursor:pointer}.ds-btn-primary:hover{background:#3a7bff;transform:translateY(-1px)}.ds-btn-primary:focus-visible{outline:2px solid #5ea0ff;outline-offset:3px}"
+    },
+    {
+      "name": "Gradient Button",
+      "kind": "button",
+      "refersTo": "button-gradient",
+      "description": "Closing / pricing conversion pill with Signal gradient.",
+      "html": "<button class=\"ds-btn-gradient\">VIEW PRICING & BOOK A FREE TRIAL</button>",
+      "css": ".ds-btn-gradient{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:999px;border:none;text-transform:uppercase;font-weight:800;background:linear-gradient(120deg,#5ea0ff,#3a7bff);color:#020617;box-shadow:0 22px 55px rgba(56,189,248,0.45);transition:transform 0.16s ease;cursor:pointer}.ds-btn-gradient:hover{transform:translateY(-2px) scale(1.03)}.ds-btn-gradient:focus-visible{outline:2px solid #5ea0ff;outline-offset:3px}"
+    },
+    {
+      "name": "Eyebrow Chip",
+      "kind": "chip",
+      "refersTo": "chip-eyebrow",
+      "description": "Uppercase section/hero eyebrow pill.",
+      "html": "<span class=\"ds-chip\">MATHWISE TUTORING</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;font-size:0.76rem;letter-spacing:0.13em;text-transform:uppercase;border:1px solid rgba(129,140,248,0.8);background:radial-gradient(circle at 0 0,rgba(94,160,255,0.35),transparent 60%),rgba(15,23,42,0.98);color:#aab6c7}"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "Default dark content panel for about/privacy-style blocks.",
+      "html": "<article class=\"ds-card-panel\"><div class=\"ds-card-chip\">About</div><h3 class=\"ds-card-title\">About MathWise</h3><p class=\"ds-card-body\">Practical, conversational sessions tailored to the student.</p></article>",
+      "css": ".ds-card-panel{background:#0f131a;border-radius:18px;border:1px solid #1c2230;padding:16px;display:grid;gap:10px;color:#e8edf1;font-family:system-ui,sans-serif}.ds-card-chip{display:inline-flex;padding:4px 10px;border-radius:999px;font-size:11px;text-transform:uppercase;background:rgba(15,23,42,0.95);border:1px solid #1e293b;color:#cddaf7;width:fit-content}.ds-card-title{font-size:16px;font-weight:700;margin:0}.ds-card-body{font-size:14px;color:#d4e0f5;line-height:1.65;margin:0}"
+    },
+    {
+      "name": "Pricing Card",
+      "kind": "card",
+      "refersTo": "card-pricing",
+      "description": "Tier card with Signal price and soft hover lift.",
+      "html": "<div class=\"ds-pricing\"><h2>High School</h2><div class=\"ds-price\"> <span>/ session</span></div><a class=\"ds-pricing-cta\" href=\"#\">Book a free trial</a></div>",
+      "css": ".ds-pricing{background:#0f131a;border:1px solid #1c2230;border-radius:24px;padding:32px 28px;width:280px;text-align:center;color:#e8edf1;font-family:system-ui,sans-serif;transition:transform 0.2s ease,box-shadow 0.2s ease}.ds-pricing:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.6);border-color:rgba(94,160,255,0.5)}.ds-pricing h2{font-size:1.5rem;margin:0 0 8px}.ds-price{font-size:2.5rem;font-weight:800;color:#5ea0ff;margin:16px 0}.ds-price span{font-size:1rem;font-weight:400;color:#aab6c7}.ds-pricing-cta{display:inline-block;background:linear-gradient(120deg,#5ea0ff,#3a7bff);color:#020617;text-decoration:none;padding:12px 24px;border-radius:40px;font-weight:700}"
+    },
+    {
+      "name": "Dark Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Dark enrol field on Panel Soft with Signal focus ring.",
+      "html": "<label class=\"ds-field\"><span>Email</span><input type=\"email\" placeholder=\"Your email\"/></label>",
+      "css": ".ds-field{display:grid;gap:8px;font-family:system-ui,sans-serif;color:#e8edf1}.ds-field span{font-size:0.9rem;font-weight:600;color:#e8edf1}.ds-field input{width:100%;padding:12px 14px;border:1px solid #1c2230;border-radius:8px;background:#0b0f19;color:#e8edf1;font-size:1rem}.ds-field input:focus{outline:none;border-color:#5ea0ff;box-shadow:0 0 0 3px rgba(94,160,255,0.25)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Logo wordmark + cool links with 44px touch targets; activate to Signal Blue.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-logo\">MathWise</div><div class=\"ds-links\"><a class=\"ds-link ds-link-active\" href=\"#\">Home</a><a class=\"ds-link\" href=\"#\">Pricing</a><a class=\"ds-link\" href=\"#\">Enrol Now</a></div></nav>",
+      "css": ".ds-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(94,160,255,0.3);font-family:system-ui,sans-serif}.ds-logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#fff,#5ea0ff);-webkit-background-clip:text;background-clip:text;color:transparent}.ds-links{display:flex;gap:12px;flex-wrap:wrap}.ds-link{color:#aab6c7;text-decoration:none;font-weight:600;min-height:44px;padding:10px 14px;border-radius:8px;display:inline-flex;align-items:center;transition:color 0.2s}.ds-link:hover,.ds-link-active{color:#5ea0ff}.ds-link:focus-visible{outline:2px solid #5ea0ff;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Path Studio",
+    "overview": "MathWise\u2019s interface is a calm, dark studio for parents choosing maths support \u2014 trustworthy, unrushed, and clear. Near-black canvases with a soft night atmosphere hold soft, lifted panels; Signal Blue is the guiding accent, not wallpaper. The home experience is literally a path: a glowing vertical line connects hero \u2192 team \u2192 about \u2192 CTA, so the page feels like a quiet journey rather than a brochure stack.\n\nDensity stays measured. Large flow gaps (400px desktop) and generous card padding slow the scroll; type is system UI for familiarity, with heavy display weights reserved for parent-facing headlines. Motion is purposeful (path draw, gentle card fade-ins, soft hover lift) \u2014 never frantic.",
+    "keyCharacteristics": [
+      "Near-black canvas with soft night atmosphere (low Signal Blue radials + Night Slate depth), sparse constellation dots in side gutters, and ink panels; Signal Blue is the sole primary accent",
+      "Soft pill CTAs and eyebrow chips; inviting, not corporate-sharp",
+      "Lifted glow depth on hero shells and key cards",
+      "Signature animated path as the home-page narrative device",
+      "Logo wordmark uses a white\u2192Signal Blue gradient; preserve logo assets"
+    ],
+    "rules": [
+      {
+        "name": "The Signal Rarity Rule",
+        "body": "Signal Blue should remain a minority of any screen \u2014 accents, links, path, and CTAs \u2014 never full-bleed backgrounds or large text blocks.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark Continuity Rule",
+        "body": "All marketing surfaces (including Enrol) belong on the void/panel system \u2014 Panel Ink form card, Panel Soft fields, Signal Blue focus and gradient submit.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Ladder Rule",
+        "body": "Reserve 900 for hero display; section titles stay 700\u2013800; body never competes with Signal Blue emphasis spans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Path Spine Rule",
+        "body": "On home, major sections should remain path-anchorable (origin \u2192 anchors \u2192 end). Do not collapse the long vertical rhythm into a tight card stack without a replacement narrative device.",
+        "section": "layout"
+      },
+      {
+        "name": "The Resting Quiet Rule",
+        "body": "At rest, most panels stay modest; reserve the double-shadow + blue bloom for hero and final CTA shells.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Soft Invite Rule",
+        "body": "Prefer pill CTAs and 16\u201324px card radii over sharp rectangles or hairline \u201ceditorial\u201d corners.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep Void Black + Panel Ink + Signal Blue as the default triad.",
+      "Do use pill CTAs with soft hover lift/scale for conversion actions.",
+      "Do preserve logo assets and the white\u2192Signal Blue gradient wordmark treatment.",
+      "Do keep checklist ticks Success Mint and review stars Star Amber \u2014 not Signal Blue.",
+      "Do keep Enrol (and any new forms) on the dark panel language."
+    ],
+    "donts": [
+      "Don't flood screens with Signal Blue backgrounds; rarity is the accent\u2019s job.",
+      "Don't introduce a second primary accent family (purple, teal branding, warm cream education tropes).",
+      "Don't reintroduce a light Calibri enrol card \u2014 stay on Panel Ink.",
+      "Don't replace the home path narrative with a dense dashboard of cards.",
+      "Don't invent testimonials, school logos, or result claims as visual decoration."
+    ]
+  }
+}
