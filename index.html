@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MathWise – Maths Tutoring Years 3–12</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/home.css">
   <meta name="description" content="MathWise – North Shore maths tutoring for Years 3–12. High-achieving tutors, free diagnostic trial. Online or in-person.">
@@ -14,17 +14,18 @@
 <body>
 <div class="container">
   <nav class="navbar">
-    <div class="logo-area">
-      <img src="images/logo.png" alt="MathWise Logo">
+    <a class="logo-area" href="index.html" aria-label="MathWise home">
+      <img src="images/logo1.png" alt="" width="40" height="26">
       <span class="logo-text">MathWise</span>
-    </div>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="team.html">Team</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="enrol.html">Enrol Now</a></li>
     </ul>
   </nav>
+
+  <main id="main">
 
   <div class="mw-deco-wrap">
     <section class="mw-hero mw-flow-block mw-flow-block--full">
@@ -32,26 +33,12 @@
         <span class="mw-path-origin" aria-hidden="true"></span>
         <div class="mw-hero-inner">
           <div class="mw-hero-content">
-            <div class="mw-hero-pill"><i class="fa-solid fa-sparkles"></i> MATHWISE TUTORING</div>
             <h1 class="mw-hero-title">Want your child to<br>excel in maths?</h1>
-            <p class="mw-hero-sub">We help students from <span>Year&nbsp;3 to Year&nbsp;12</span> build deep understanding, exam confidence, and the kind of problem-solving that actually sticks.</p>
-            <ul class="mw-hero-points">
-              <li><i class="fa-solid fa-check-circle"></i><span>High-achieving tutors who have recently completed the HSC</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span>Targeted support for school exams, and the HSC</span></li>
-              <li><i class="fa-solid fa-check-circle"></i><span>Online or in-person options to suit your family</span></li>
-            </ul>
-            <div class="mw-hero-footer">
-              <div class="mw-hero-social">
-                <span>Find us on</span>
-                <a href="https://www.instagram.com/mathwisetutoring" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/share/1aGxc6PgpE" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-              </div>
-            </div>
+            <p class="mw-hero-sub">Maths tutoring for <span>Year&nbsp;3 to Year&nbsp;12</span> — deep understanding, exam confidence, and problem-solving that sticks.</p>
+            <a href="enrol.html" class="mw-hero-cta">Book free trial lesson <span class="mw-icon mw-icon--arrow-right" aria-hidden="true"></span></a>
           </div>
           <div class="mw-hero-media">
-            <img class="mw-hero-img" src="images/example.jpeg" alt="MathWise tutoring session">
-            <a href="enrol.html" class="mw-hero-cta">Book free trial lesson <i class="fa-solid fa-arrow-right"></i></a>
+            <img class="mw-hero-img" src="images/example.jpeg" width="1200" height="800" fetchpriority="high" decoding="async" alt="MathWise tutoring session">
           </div>
         </div>
       </div>
@@ -78,13 +65,14 @@
           <h2 class="mw-team-title">Meet the team behind MathWise</h2>
           <div class="gallery-container">
             <div class="gallery">
-              <div class="tutor-card"><div class="tutor-image"><img src="images/alex.jpeg" alt="Alex Chan"></div><div class="tutor-info"><h2 class="tutor-name">Alex Chan</h2><div class="tutor-year"><i class="fas fa-calendar-alt"></i> Year 7-12</div><p class="tutor-bio">UNSW | B. Engineering (Mech) | ATAR 99.25</p></div></div>
-              <div class="tutor-card"><div class="tutor-image"><img src="images/raoul.jpeg" alt="Raoul Sohal"></div><div class="tutor-info"><h2 class="tutor-name">Raoul Sohal</h2><div class="tutor-year"><i class="fas fa-calendar-alt"></i> Year 7-12</div><p class="tutor-bio">UNSW | B. Engineering (Chemical) | ATAR 96.50</p></div></div>
-              <div class="tutor-card"><div class="tutor-image"><img src="images/jack.jpeg" alt="Jack Moon"></div><div class="tutor-info"><h2 class="tutor-name">Jack Moon</h2><div class="tutor-year"><i class="fas fa-calendar-alt"></i> Year 10-12</div><p class="tutor-bio">UNSW | B. Engineering (Electrical) | ATAR 99.25</p></div></div>
-              <div class="tutor-card"><div class="tutor-image"><img src="images/eyal.jpeg" alt="Eyal Tsafnat"></div><div class="tutor-info"><h2 class="tutor-name">Eyal Tsafnat</h2><div class="tutor-year"><i class="fas fa-calendar-alt"></i> Year 7-11</div><p class="tutor-bio">USYD | B. Science | ATAR 94.45</p></div></div>
+              <div class="tutor-card"><div class="tutor-image"><img src="images/alex.jpeg" alt="Alex Chan" loading="lazy" decoding="async" width="520" height="693"></div><div class="tutor-info"><p class="tutor-name">Alex Chan</p><div class="tutor-year"><span class="mw-icon mw-icon--calendar" aria-hidden="true"></span> Year 7-12</div><p class="tutor-bio">UNSW | B. Engineering (Electrical) | ATAR 99.25</p></div></div>
+              <div class="tutor-card"><div class="tutor-image"><img src="images/raoul.jpeg" alt="Raoul Sohal" loading="lazy" decoding="async" width="520" height="693"></div><div class="tutor-info"><p class="tutor-name">Raoul Sohal</p><div class="tutor-year"><span class="mw-icon mw-icon--calendar" aria-hidden="true"></span> Year 7-12</div><p class="tutor-bio">UNSW | B. Engineering (Chemical) | ATAR 96.50</p></div></div>
+              <div class="tutor-card"><div class="tutor-image"><img src="images/jack.jpeg" alt="Jack Moon" loading="lazy" decoding="async" width="520" height="693"></div><div class="tutor-info"><p class="tutor-name">Jack Moon</p><div class="tutor-year"><span class="mw-icon mw-icon--calendar" aria-hidden="true"></span> Year 10-12</div><p class="tutor-bio">UNSW | B. Engineering (Electrical) | ATAR 99.25</p></div></div>
+              <div class="tutor-card"><div class="tutor-image"><img src="images/eyal.jpeg" alt="Eyal Tsafnat" loading="lazy" decoding="async" width="520" height="693"></div><div class="tutor-info"><p class="tutor-name">Eyal Tsafnat</p><div class="tutor-year"><span class="mw-icon mw-icon--calendar" aria-hidden="true"></span> Year 7-11</div><p class="tutor-bio">USYD | B. Science | ATAR 94.45</p></div></div>
+              <div class="tutor-card"><div class="tutor-image"><img src="images/siyuan.jpeg" alt="Siyuan Qiu" loading="lazy" decoding="async" width="520" height="693"></div><div class="tutor-info"><p class="tutor-name">Siyuan Qiu</p><div class="tutor-year"><span class="mw-icon mw-icon--calendar" aria-hidden="true"></span> Year 7-12</div><p class="tutor-bio">UNSW | B. Engineering (Civil) / B. Commerce | ATAR 97.80</p></div></div>
             </div>
           </div>
-          <a href="team.html" class="mw-team-link">View full team <i class="fa-solid fa-arrow-right"></i></a>
+          <p class="mw-team-tagline">Meet our high-achieving tutors who have recently completed the HSC and understand what students are going through right now.</p>
           <span class="mw-path-anchor mw-path-anchor--team-bottom" aria-hidden="true"></span>
         </div>
       </div>
@@ -92,18 +80,17 @@
       <div class="mw-flow-block mw-review-row mw-review-row--about">
         <article class="mw-about-card">
           <span class="mw-path-anchor mw-path-anchor--top" aria-hidden="true"></span>
-          <div class="mw-about-chip">About</div>
           <h3 class="mw-about-card-title">About MathWise</h3>
-          <p class="mw-about-card-body">MathWise is a small, specialised tutoring team dedicated to helping students move from <span class="mw-em">“I kind of get it”</span> to <span class="mw-em">“I can do this on my own.”</span></p>
+          <p class="mw-about-lead">MathWise is a small, specialised tutoring team dedicated to helping students move from <span class="mw-em">“I kind of get it”</span> to <span class="mw-em">“I can do this on my own.”</span></p>
           <p class="mw-about-card-body">We focus on mathematics from primary foundations through to senior courses, with targeted support for class work, exam technique and long-term confidence. Sessions are practical, conversational and tailored to the student in front of us. <strong>We’re based on Sydney’s North Shore, with in‑person sessions available across the region.</strong></p>
           <span class="mw-path-anchor mw-path-anchor--bottom" aria-hidden="true"></span>
         </article>
         <aside class="mw-review-card">
-          <img class="mw-review-photo" src="images/placeholder1.webp" alt="">
-          <i class="fa-solid fa-quote-left mw-review-quote-icon" aria-hidden="true"></i>
+          <img class="mw-review-photo" src="images/placeholder1.webp" alt="" loading="lazy" decoding="async" width="360" height="140">
+          <span class="mw-icon mw-icon--quote mw-review-quote-icon" aria-hidden="true"></span>
           <p class="mw-review-text">My daughter went from dreading maths homework to actually asking for extra practice sheets. The tutors explain things in a way that finally clicked for her.</p>
           <div class="mw-review-stars" aria-label="5 out of 5 stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span>
           </div>
           <span class="mw-review-by">Parent of Year 8 student</span>
         </aside>
@@ -112,13 +99,38 @@
       <div class="mw-flow-block mw-flow-block--center">
         <article class="mw-about-card">
           <span class="mw-path-anchor mw-path-anchor--top" aria-hidden="true"></span>
-          <div class="mw-about-chip">Our Approach</div>
           <h3 class="mw-about-card-title">How We Teach</h3>
           <p class="mw-about-card-body">Every session is built around four clear steps:</p>
-          <p class="mw-about-card-body"><span class="mw-em">1. Understand</span> – We teach each concept thoroughly, breaking it down until the logic feels natural, not memorised.</p>
-          <p class="mw-about-card-body"><span class="mw-em">2. Practise</span> – Students work through questions with live tutor guidance, so mistakes are caught and corrected immediately.</p>
-          <p class="mw-about-card-body"><span class="mw-em">3. Reinforce</span> – Targeted homework is marked in detail, with personalised feedback that explains exactly how to improve.</p>
-          <p class="mw-about-card-body"><span class="mw-em">4. Check</span> – A short quiz at the start of each following session uncovers gaps and solidifies what’s been learned.</p>
+          <ol class="mw-step-list">
+            <li class="mw-step">
+              <span class="mw-step-num" aria-hidden="true">1</span>
+              <div>
+                <span class="mw-step-label">Understand</span>
+                <p class="mw-step-text">We teach each concept thoroughly, breaking it down until the logic feels natural, not memorised.</p>
+              </div>
+            </li>
+            <li class="mw-step">
+              <span class="mw-step-num" aria-hidden="true">2</span>
+              <div>
+                <span class="mw-step-label">Practise</span>
+                <p class="mw-step-text">Students work through questions with live tutor guidance, so mistakes are caught and corrected immediately.</p>
+              </div>
+            </li>
+            <li class="mw-step">
+              <span class="mw-step-num" aria-hidden="true">3</span>
+              <div>
+                <span class="mw-step-label">Reinforce</span>
+                <p class="mw-step-text">Targeted homework is marked in detail, with personalised feedback that explains exactly how to improve.</p>
+              </div>
+            </li>
+            <li class="mw-step">
+              <span class="mw-step-num" aria-hidden="true">4</span>
+              <div>
+                <span class="mw-step-label">Check</span>
+                <p class="mw-step-text">A short quiz at the start of each following session uncovers gaps and solidifies what’s been learned.</p>
+              </div>
+            </li>
+          </ol>
           <span class="mw-path-anchor mw-path-anchor--bottom" aria-hidden="true"></span>
         </article>
       </div>
@@ -126,21 +138,37 @@
       <div class="mw-flow-block mw-review-row mw-review-row--why">
         <article class="mw-about-card">
           <span class="mw-path-anchor mw-path-anchor--top" aria-hidden="true"></span>
-          <div class="mw-about-chip">Why Choose Us</div>
           <h3 class="mw-about-card-title">What Makes Us Different</h3>
-          <p class="mw-about-card-body"><span class="mw-em">Recent experience</span> – Tutors who have very recently completed the HSC and understand current exam trends.</p>
-          <p class="mw-about-card-body"><span class="mw-em">Curriculum-aligned</span> – Content tuned to NESA outcomes, school pacing and internal assessment styles.</p>
-          <p class="mw-about-card-body"><span class="mw-em">Clarity first</span> – We avoid random tricks and focus on patterns, structure and reasoning, so students can adapt to unfamiliar questions.</p>
-          <p class="mw-about-card-body"><span class="mw-em">Always available</span> – Our tutors go the extra mile to help between sessions, so you never get stuck alone.</p>
-          <p class="mw-about-card-body"><span class="mw-em">📍 Local presence</span> – We serve Chatswood, Roseville, Lindfield, Killara, Gordon, Pymble, Turramurra, Warrawee, Wahroonga, Waitara, Hornsby, Normanhurst, Thornleigh, St Ives.</p>
+          <ul class="mw-reason-list">
+            <li class="mw-reason">
+              <span class="mw-reason-label">Recent experience</span>
+              <p class="mw-reason-text">Tutors who have very recently completed the HSC and understand current exam trends.</p>
+            </li>
+            <li class="mw-reason">
+              <span class="mw-reason-label">Curriculum-aligned</span>
+              <p class="mw-reason-text">Content tuned to NESA outcomes, school pacing and internal assessment styles.</p>
+            </li>
+            <li class="mw-reason">
+              <span class="mw-reason-label">Clarity first</span>
+              <p class="mw-reason-text">We avoid random tricks and focus on patterns, structure and reasoning, so students can adapt to unfamiliar questions.</p>
+            </li>
+            <li class="mw-reason">
+              <span class="mw-reason-label">Always available</span>
+              <p class="mw-reason-text">Our tutors go the extra mile to help between sessions, so you never get stuck alone.</p>
+            </li>
+            <li class="mw-reason">
+              <span class="mw-reason-label"><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Local presence</span>
+              <p class="mw-reason-text">We serve Chatswood, Roseville, Lindfield, Killara, Gordon, Pymble, Turramurra, Warrawee, Wahroonga, Waitara, Hornsby, Normanhurst, Thornleigh, St Ives.</p>
+            </li>
+          </ul>
           <span class="mw-path-anchor mw-path-anchor--bottom" aria-hidden="true"></span>
         </article>
         <aside class="mw-review-card">
-          <img class="mw-review-photo" src="images/placeholder2.jpg" alt="">
-          <i class="fa-solid fa-quote-left mw-review-quote-icon" aria-hidden="true"></i>
+          <img class="mw-review-photo" src="images/placeholder2.jpg" alt="" loading="lazy" decoding="async" width="360" height="140">
+          <span class="mw-icon mw-icon--quote mw-review-quote-icon" aria-hidden="true"></span>
           <p class="mw-review-text">Found a tutor who actually remembers what the HSC is like right now, not ten years ago. Made a real difference to my exam confidence in Year 12.</p>
           <div class="mw-review-stars" aria-label="5 out of 5 stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span><span class="mw-icon mw-icon--star" aria-hidden="true"></span>
           </div>
           <span class="mw-review-by">Year 12 student</span>
         </aside>
@@ -151,10 +179,10 @@
           <div class="mw-pricing-shell">
             <span class="mw-path-end" aria-hidden="true"></span>
             <div class="mw-pricing-inner">
-              <div class="mw-pricing-pill"><i class="fa-solid fa-calculator"></i> READY TO GET STARTED?</div>
+              <div class="mw-pricing-pill"><span class="mw-icon mw-icon--calculator" aria-hidden="true"></span> READY TO GET STARTED?</div>
               <h2 class="mw-pricing-title">See transparent pricing for Year&nbsp;3–12.</h2>
               <p class="mw-pricing-sub">Compare options, choose the right level of support, and lock in a free diagnostic trial before committing.</p>
-              <a href="pricing.html" class="mw-pricing-btn" data-path-target>VIEW PRICING &amp; BOOK A FREE TRIAL <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="pricing.html" class="mw-pricing-btn" data-path-target>VIEW PRICING &amp; BOOK A FREE TRIAL <span class="mw-icon mw-icon--arrow-right" aria-hidden="true"></span></a>
             </div>
           </div>
         </section>
@@ -162,10 +190,12 @@
     </div>
   </div>
 
+  </main>
+
   <div class="footer">
     <div class="footer-content">
       <span>© MathWise 2026. All Rights Reserved</span>
-      <span>📍 Proudly serving Sydney’s North Shore community</span>
+      <span><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Proudly serving Sydney’s North Shore community</span>
       <span>ABN 48 113 347 147</span>
       <a href="privacy.html" class="footer-privacy">Privacy Policy</a>
     </div>

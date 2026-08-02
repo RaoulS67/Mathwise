@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MathWise – Enrol Now</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/enrol.css">
   <meta name="description" content="MathWise – North Shore maths tutoring for Years 3–12. High-achieving tutors, free diagnostic trial. Online or in-person.">
@@ -14,21 +14,22 @@
 <body>
 <div class="container">
   <nav class="navbar">
-    <div class="logo-area">
-      <img src="images/logo.png" alt="MathWise Logo">
+    <a class="logo-area" href="index.html" aria-label="MathWise home">
+      <img src="images/logo1.png" alt="" width="40" height="26">
       <span class="logo-text">MathWise</span>
-    </div>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="team.html">Team</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="enrol.html" class="active">Enrol Now</a></li>
     </ul>
   </nav>
 
+  <main id="main">
+
   <div class="enrol-form-wrapper">
     <form action="https://formspree.io/f/mvgqnvdn" method="POST">
-      <h2>Book a Session</h2>
+      <h1>Book a Session</h1>
       <p class="description">Flexible scheduling to fit your needs. Online and in-person sessions available.</p>
       <div class="form-group">
         <label for="name">Name</label>
@@ -48,15 +49,17 @@
   </div>
 
   <div class="contact-boxes">
-    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Feel free to message or email us if you have any further questions!</div>
-    <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+61481414923">0481 414 923</a></div>
-    <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:info@mathwise.com.au">info@mathwise.com.au</a></div>
+    <div class="contact-item"><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Feel free to message or email us if you have any further questions!</div>
+    <div class="contact-item"><span class="mw-icon mw-icon--phone" aria-hidden="true"></span> <a href="tel:+61481414923">0481 414 923</a></div>
+    <div class="contact-item"><span class="mw-icon mw-icon--envelope" aria-hidden="true"></span> <a href="mailto:info@mathwise.com.au">info@mathwise.com.au</a></div>
   </div>
+
+  </main>
 
   <div class="footer">
     <div class="footer-content">
       <span>© MathWise 2026. All Rights Reserved</span>
-      <span>📍 Proudly serving Sydney’s North Shore community</span>
+      <span><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Proudly serving Sydney’s North Shore community</span>
       <span>ABN 48 113 347 147</span>
       <a href="privacy.html" class="footer-privacy">Privacy Policy</a>
     </div>
