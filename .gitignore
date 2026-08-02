@@ -4,8 +4,12 @@
 # Editor / IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *~
+
+# Impeccable local tooling / scratch
+.impeccable/
 
 # OS / misc
 Thumbs.db
