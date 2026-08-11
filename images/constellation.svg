@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2400" fill="none" aria-hidden="true">
-  <!-- Full-canvas sparse field (trial): all open dark gaps; behind opaque panels -->
-  <g stroke="rgba(94,160,255,0.2)" stroke-width="1">
+  <!-- Soft Harbour Signal constellation for light canvas -->
+  <g stroke="rgba(47,127,196,0.22)" stroke-width="1">
     <line x1="48" y1="140" x2="92" y2="210"/>
     <line x1="92" y1="210" x2="56" y2="295"/>
     <line x1="1180" y1="420" x2="1260" y2="510"/>
@@ -11,8 +11,7 @@
     <line x1="1320" y1="255" x2="1388" y2="340"/>
     <line x1="620" y1="900" x2="700" y2="980"/>
   </g>
-  <!-- edges -->
-  <g fill="rgba(94,160,255,0.55)">
+  <g fill="rgba(47,127,196,0.45)">
     <circle cx="36" cy="70" r="1.4"/><circle cx="48" cy="140" r="2.2"/><circle cx="92" cy="210" r="1.6"/>
     <circle cx="56" cy="295" r="2"/><circle cx="28" cy="380" r="1.4"/><circle cx="78" cy="450" r="1.8"/>
     <circle cx="56" cy="520" r="1.5"/><circle cx="110" cy="610" r="2.1"/><circle cx="42" cy="700" r="1.5"/>
@@ -32,8 +31,7 @@
     <circle cx="1385" cy="2055" r="1.5"/><circle cx="1325" cy="2165" r="1.8"/><circle cx="1402" cy="2275" r="1.4"/>
     <circle cx="1350" cy="2365" r="1.7"/>
   </g>
-  <!-- mid + center field -->
-  <g fill="rgba(94,160,255,0.48)">
+  <g fill="rgba(47,127,196,0.38)">
     <circle cx="220" cy="160" r="1.5"/><circle cx="280" cy="340" r="1.8"/><circle cx="195" cy="510" r="1.4"/>
     <circle cx="310" cy="690" r="1.7"/><circle cx="240" cy="880" r="1.5"/><circle cx="320" cy="1100" r="1.9"/>
     <circle cx="390" cy="1185" r="1.6"/><circle cx="265" cy="1350" r="1.4"/><circle cx="340" cy="1520" r="1.7"/>

@@ -7,7 +7,9 @@
   margin: 48px 0 32px;
 }
 .pricing-header h1 {
+  font-family: var(--mw-font-display);
   font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 12px;
 }
 .pricing-header p {
@@ -29,15 +31,23 @@
   padding: 32px 28px;
   width: 320px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--mw-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .pricing-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  border-color: rgba(94,160,255,0.5);
+  transform: translateY(-4px);
+  box-shadow: var(--mw-shadow-lg);
+  border-color: color-mix(in srgb, var(--mw-accent) 35%, var(--mw-border));
+}
+.pricing-card--featured {
+  border-color: var(--mw-accent);
+  border-width: 2px;
+  box-shadow: var(--mw-shadow-lg);
 }
 .pricing-card h2 {
+  font-family: var(--mw-font-display);
   font-size: 1.8rem;
+  font-weight: 800;
   margin-bottom: 8px;
 }
 .pricing-card .price {
@@ -46,14 +56,17 @@
   color: var(--mw-accent);
   margin: 16px 0 8px;
 }
+.pricing-card--featured .price {
+  font-weight: 900;
+}
 .pricing-card .price span {
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--mw-sub);
 }
 .offer-badge {
-  background: rgba(94,160,255,0.15);
-  border: 1px solid rgba(94,160,255,0.4);
+  background: color-mix(in srgb, var(--mw-accent) 12%, var(--mw-panel));
+  border: 1px solid color-mix(in srgb, var(--mw-accent) 35%, var(--mw-border));
   border-radius: 40px;
   padding: 6px 12px;
   font-size: 0.85rem;
@@ -66,7 +79,7 @@
   margin: 8px 0 16px;
 }
 .offer-badge .mw-icon {
-  color: #facc15;
+  color: var(--mw-star);
 }
 .pricing-card ul {
   list-style: none;
@@ -81,7 +94,7 @@
   color: var(--mw-sub);
 }
 .pricing-card li .mw-icon {
-  color: #4ade80;
+  color: var(--mw-success);
   width: 1.1em;
   height: 1.1em;
 }
@@ -90,18 +103,20 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(120deg, var(--mw-accent), var(--mw-accent-soft));
-  color: #020617;
+  background: var(--mw-accent);
+  color: var(--mw-panel);
   text-decoration: none;
   padding: 12px 24px;
-  border-radius: 40px;
+  border-radius: var(--mw-radius-btn);
   font-weight: 700;
   margin-top: 8px;
-  transition: transform 0.2s;
+  transition: background 0.2s ease, transform 0.2s ease;
   min-height: 44px;
+  box-shadow: var(--mw-shadow);
 }
 .pricing-card .btn:hover {
-  transform: scale(1.02);
+  background: var(--mw-accent-bright);
+  transform: translateY(-1px);
 }
 .pricing-card .btn:focus-visible {
   outline: 2px solid var(--mw-accent);
@@ -112,11 +127,11 @@
   color: var(--mw-sub);
   margin: 40px 0;
   font-size: 0.9rem;
-  border-top: 1px solid rgba(94,160,255,0.2);
+  border-top: 1px solid var(--mw-border);
   padding-top: 32px;
 }
 .footnote .mw-icon {
-  color: #facc15;
+  color: var(--mw-star);
   margin-right: 4px;
 }
 
