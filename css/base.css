@@ -1,15 +1,24 @@
 :root {
-  --mw-bg: #000000;
-  --mw-bg-wash: rgba(94, 160, 255, 0.14);
-  --mw-bg-wash-soft: rgba(94, 160, 255, 0.09);
-  --mw-bg-depth: #020617;
-  --mw-panel: #0f131a;
-  --mw-panel-soft: #0b0f19;
-  --mw-border: #1c2230;
-  --mw-accent: #5ea0ff;
-  --mw-accent-soft: #3a7bff;
-  --mw-text: #e8edf1;
-  --mw-sub: #aab6c7;
+  /* Day Path Studio — cool light neutrals + Harbour Signal */
+  --mw-bg: #f4f7fb;
+  --mw-bg-wash: rgba(47, 127, 196, 0.08);
+  --mw-bg-wash-soft: rgba(47, 127, 196, 0.05);
+  --mw-bg-depth: #e8eef6;
+  --mw-panel: #ffffff;
+  --mw-panel-soft: #e8eef6;
+  --mw-border: #d5deea;
+  --mw-accent: #2f7fc4;
+  --mw-accent-bright: #4b9fe8;
+  --mw-accent-soft: #2f7fc4;
+  --mw-text: #1a2332;
+  --mw-sub: #5a6b7d;
+  --mw-success: #2f9e6e;
+  --mw-star: #c9a227;
+  --mw-font-display: "Newsreader", "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mw-font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mw-shadow: 0 8px 24px rgba(26, 35, 50, 0.08);
+  --mw-shadow-lg: 0 16px 40px rgba(26, 35, 50, 0.1);
+  --mw-radius-btn: 14px;
 }
 
 * {
@@ -26,12 +35,12 @@ body {
     radial-gradient(ellipse 90% 55% at 50% 105%, var(--mw-bg-depth), transparent 62%);
   background-attachment: scroll;
   color: var(--mw-text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--mw-font-body);
   line-height: 1.5;
   position: relative;
 }
 
-/* Full-canvas constellation trial — shows through open dark gaps; behind panels (z-index) */
+/* Constellation — soft Signal on light canvas; scrolls with document */
 body::before {
   content: "";
   position: absolute;
@@ -45,7 +54,7 @@ body::before {
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% auto;
-  opacity: 0.58;
+  opacity: 0.4;
 }
 
 .container {
@@ -57,7 +66,7 @@ body::before {
 
 @media (max-width: 900px) {
   body::before {
-    opacity: 0.28;
+    opacity: 0.22;
   }
 }
 
@@ -72,7 +81,7 @@ body::before {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid rgba(94, 160, 255, 0.3);
+  border-bottom: 1px solid var(--mw-border);
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -98,9 +107,10 @@ body::before {
 }
 
 .logo-text {
+  font-family: var(--mw-font-display);
   font-size: 1.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #fff, var(--mw-accent));
+  background: linear-gradient(135deg, var(--mw-text), var(--mw-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -139,7 +149,7 @@ body::before {
 }
 
 .footer {
-  border-top: 1px solid rgba(94, 160, 255, 0.2);
+  border-top: 1px solid var(--mw-border);
   padding: 32px 0 24px;
   font-size: 0.85rem;
   color: var(--mw-sub);

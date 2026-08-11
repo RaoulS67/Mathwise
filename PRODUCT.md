@@ -51,7 +51,7 @@ A small, specialised tutoring team whose tutors have recently completed the HSC 
 - Real tutor profiles (names, photos, ATARs, universities, year ranges): Alex Chan, Raoul Sohal, Jack Moon, Eyal Tsafnat, Siyuan Qiu — assets under `images/*.jpeg`.
 - Real session imagery: `images/example.jpeg`.
 - Real business identity: ABN, phone, email, logos, Privacy Policy.
-- Home-page parent/student quotes and `images/placeholder1.webp` / `images/placeholder2.jpg` are not confirmed customer evidence; future work must not present them as proven testimonials or invent replacements.
+- Confirmed home-page testimonials (shown on `index.html`): parent of a Year 9 student; Year 12 student. Do not invent additional testimonials beyond these.
 
 ## Product Principles
 
