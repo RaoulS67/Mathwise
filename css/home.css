@@ -119,8 +119,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--mw-accent);
-  color: var(--mw-panel);
+  background: var(--mw-cta);
+  color: var(--mw-on-accent);
   text-decoration: none;
   padding: 14px 28px;
   border-radius: var(--mw-radius-btn);
@@ -133,7 +133,7 @@
 }
 
 .mw-hero-cta:hover {
-  background: var(--mw-accent-bright);
+  background: var(--mw-cta-hover);
   transform: translateY(-1px);
 }
 
@@ -553,6 +553,22 @@
   max-width: 520px;
 }
 
+.mw-pricing-faq-link a {
+  color: var(--mw-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mw-pricing-faq-link a:hover {
+  text-decoration: underline;
+}
+
+.mw-pricing-faq-link a:focus-visible {
+  outline: 2px solid var(--mw-accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .mw-pricing-btn {
   display: flex;
   align-items: center;
@@ -563,8 +579,8 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
-  background: var(--mw-accent);
-  color: var(--mw-panel);
+  background: var(--mw-cta);
+  color: var(--mw-on-accent);
   box-shadow: var(--mw-shadow);
   transition: transform 0.16s ease, background 0.2s ease;
   width: 100%;
@@ -575,7 +591,7 @@
 }
 
 .mw-pricing-btn:hover {
-  background: var(--mw-accent-bright);
+  background: var(--mw-cta-hover);
   transform: translateY(-2px);
 }
 

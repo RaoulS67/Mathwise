@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   /* Day Path Studio — cool light neutrals + Harbour Signal */
   --mw-bg: #f4f7fb;
   --mw-bg-wash: rgba(47, 127, 196, 0.08);
@@ -10,6 +11,9 @@
   --mw-accent: #2f7fc4;
   --mw-accent-bright: #4b9fe8;
   --mw-accent-soft: #2f7fc4;
+  --mw-cta: #2f7fc4;
+  --mw-cta-hover: #4b9fe8;
+  --mw-on-accent: #ffffff;
   --mw-text: #1a2332;
   --mw-sub: #5a6b7d;
   --mw-success: #2f9e6e;
@@ -19,6 +23,34 @@
   --mw-shadow: 0 8px 24px rgba(26, 35, 50, 0.08);
   --mw-shadow-lg: 0 16px 40px rgba(26, 35, 50, 0.1);
   --mw-radius-btn: 14px;
+  --mw-constellation-opacity: 0.4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    /* Night Path Studio — same Signal, inverted cool canvas */
+    --mw-bg: #121820;
+    --mw-bg-wash: rgba(75, 159, 232, 0.12);
+    --mw-bg-wash-soft: rgba(75, 159, 232, 0.07);
+    --mw-bg-depth: #0b1016;
+    --mw-panel: #1a2332;
+    --mw-panel-soft: #151c28;
+    --mw-border: #2d3a4c;
+    --mw-accent: #4b9fe8;
+    --mw-accent-bright: #6eb4f0;
+    --mw-accent-soft: #4b9fe8;
+    --mw-cta: #2f7fc4;
+    --mw-cta-hover: #2589c9;
+    --mw-on-accent: #ffffff;
+    --mw-text: #e8eef6;
+    --mw-sub: #9aabbd;
+    --mw-success: #3dba82;
+    --mw-star: #d4b03a;
+    --mw-shadow: 0 8px 24px rgba(0, 0, 0, 0.36);
+    --mw-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+    --mw-constellation-opacity: 0.55;
+  }
 }
 
 * {
@@ -38,9 +70,10 @@ body {
   font-family: var(--mw-font-body);
   line-height: 1.5;
   position: relative;
+  accent-color: var(--mw-accent);
 }
 
-/* Constellation — soft Signal on light canvas; scrolls with document */
+/* Constellation — soft Signal on canvas; scrolls with document */
 body::before {
   content: "";
   position: absolute;
@@ -54,7 +87,7 @@ body::before {
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% auto;
-  opacity: 0.4;
+  opacity: var(--mw-constellation-opacity);
 }
 
 .container {
@@ -66,7 +99,7 @@ body::before {
 
 @media (max-width: 900px) {
   body::before {
-    opacity: 0.22;
+    opacity: calc(var(--mw-constellation-opacity) * 0.55);
   }
 }
 
@@ -214,4 +247,12 @@ body::before {
   margin-right: 6px;
   color: var(--mw-accent);
   vertical-align: -0.15em;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--mw-text);
+  caret-color: var(--mw-text);
+  box-shadow: 0 0 0 1000px var(--mw-panel-soft) inset;
+  transition: background-color 99999s ease-in-out 0s;
 }

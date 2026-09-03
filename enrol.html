@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>MathWise – Enrol Now</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f7fb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121820">
+  <title>Book a free trial – MathWise</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +14,18 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/enrol.css">
-  <meta name="description" content="MathWise – North Shore maths tutoring for Years 3–12. High-achieving tutors, free diagnostic trial. Online or in-person.">
-  <meta name="keywords" content="maths tutoring North Shore, Chatswood, Roseville, Lindfield, Killara, Gordon, Pymble, Turramurra, Warrawee, Wahroonga, Waitara, Hornsby, Normanhurst, Thornleigh, South Turramurra, West Pymble, West Lindfield, St Ives, HSC tutoring, primary maths, high school maths">
+  <meta name="description" content="Book a free one-hour diagnostic trial with MathWise. We’ll match a tutor and find a time — online or in person across Sydney’s North Shore.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MathWise">
+  <meta property="og:title" content="Book a free trial – MathWise">
+  <meta property="og:description" content="Book a free one-hour diagnostic trial. We’ll match a tutor and find a time — online or in person on the North Shore.">
+  <meta property="og:url" content="https://mathwise.com.au/enrol.html">
+  <meta property="og:image" content="https://mathwise.com.au/images/logo1.png">
+  <meta property="og:image:alt" content="MathWise logo">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":["LocalBusiness","EducationalOrganization"],"name":"MathWise","url":"https://mathwise.com.au/","logo":"https://mathwise.com.au/images/logo1.png","image":"https://mathwise.com.au/images/logo1.png","email":"info@mathwise.com.au","telephone":"+61481414923","taxID":"ABN 29 697 768 294","priceRange":"$40–$60","description":"One-to-one maths tutoring for Years 3–12 on Sydney’s North Shore, online or in person.","address":{"@type":"PostalAddress","addressLocality":"Sydney","addressRegion":"NSW","addressCountry":"AU"},"areaServed":["Chatswood","Roseville","Lindfield","Killara","Gordon","Pymble","Turramurra","Warrawee","Wahroonga","Waitara","Hornsby","Normanhurst","Thornleigh","St Ives"]}
+  </script>
 </head>
 <body>
 <div class="container">
@@ -31,28 +44,107 @@
   <main id="main">
 
   <div class="enrol-form-wrapper">
-    <form action="https://formspree.io/f/mvgqnvdn" method="POST">
-      <h1>Book a Session</h1>
-      <p class="description">Flexible scheduling to fit your needs. Online and in-person sessions available.</p>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required>
+    <form id="enrol-form" action="https://formspree.io/f/mvgqnvdn" method="POST">
+      <h1>Book a free trial</h1>
+      <p class="description">Tell us a little about your child and we’ll match a tutor, then lock in the free diagnostic lesson — online or in person on the North Shore.</p>
+      <p id="plan-note" class="plan-note" hidden></p>
+
+      <input type="hidden" name="_subject" value="Free trial booking">
+      <input type="hidden" name="_next" value="https://mathwise.com.au/thanks.html">
+      <input type="hidden" id="plan" name="plan" value="">
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Parent or guardian name" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
       </div>
+
       <div class="form-group">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="Your email" required>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="04xx xxx xxx" autocomplete="tel" required>
       </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="child">Child’s first name</label>
+          <input id="child" name="child" type="text" placeholder="e.g. William" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+          <label for="year">Year level</label>
+          <select id="year" name="year" required>
+            <option value="" disabled selected>Select year</option>
+            <optgroup label="Primary · $40 / session">
+              <option value="Year 3">Year 3</option>
+              <option value="Year 4">Year 4</option>
+              <option value="Year 5">Year 5</option>
+              <option value="Year 6">Year 6</option>
+            </optgroup>
+            <optgroup label="High School · $50 / session">
+              <option value="Year 7">Year 7</option>
+              <option value="Year 8">Year 8</option>
+              <option value="Year 9">Year 9</option>
+              <option value="Year 10">Year 10</option>
+            </optgroup>
+            <optgroup label="HSC · $60 / session">
+              <option value="Year 11">Year 11</option>
+              <option value="Year 12">Year 12</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="form-group choice-group">
+        <legend>Session type</legend>
+        <div class="choice-row">
+          <label class="choice">
+            <input type="radio" name="session" value="Online" required>
+            <span>Online</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="session" value="In person" required>
+            <span>In person</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="session" value="Either" required>
+            <span>Either</span>
+          </label>
+        </div>
+      </fieldset>
+
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Please tell us about your child, e.g. William, Year 5, needs help with..., would prefer an in person session." required></textarea>
+        <label for="suburb">Suburb or nearest station <span class="optional">(optional)</span></label>
+        <input id="suburb" name="suburb" type="text" placeholder="e.g. Lindfield" autocomplete="address-level2">
       </div>
-      <button type="submit">Send Message</button>
-      <div class="fine-print">You’ll receive a confirmation email after submitting.</div>
+
+      <div class="form-group">
+        <label for="times">Preferred days or times</label>
+        <input id="times" name="times" type="text" placeholder="e.g. weekday afternoons, Saturday morning" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Anything we should know? <span class="optional">(optional)</span></label>
+        <textarea id="message" name="message" rows="4" placeholder="Topics they’re finding hard, school assessments coming up, Extension maths, etc."></textarea>
+      </div>
+
+      <ol class="next-steps">
+        <li>You send this form</li>
+        <li>We match a tutor to your child</li>
+        <li>We book the free diagnostic trial</li>
+      </ol>
+
+      <button type="submit">Book free trial</button>
+      <p class="fine-print">You’ll receive a confirmation email after submitting. No payment on this form — we arrange that separately.</p>
     </form>
   </div>
 
   <div class="contact-boxes">
-    <div class="contact-item"><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Feel free to message or email us if you have any further questions!</div>
+    <div class="contact-item"><span class="mw-icon mw-icon--location" aria-hidden="true"></span> Prefer to talk it through? Call or email us.</div>
     <div class="contact-item"><span class="mw-icon mw-icon--phone" aria-hidden="true"></span> <a href="tel:+61481414923">0481 414 923</a></div>
     <div class="contact-item"><span class="mw-icon mw-icon--envelope" aria-hidden="true"></span> <a href="mailto:info@mathwise.com.au">info@mathwise.com.au</a></div>
   </div>
@@ -68,5 +160,6 @@
     </div>
   </div>
 </div>
+<script src="js/enrol.js" defer></script>
 </body>
 </html>

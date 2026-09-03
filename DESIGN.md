@@ -16,6 +16,22 @@ colors:
   pure-white: "#ffffff"
   success-green: "#2f9e6e"
   star-gold: "#c9a227"
+dark:
+  canvas: "#121820"
+  canvas-wash: "rgba(75, 159, 232, 0.12)"
+  canvas-wash-soft: "rgba(75, 159, 232, 0.07)"
+  canvas-depth: "#0b1016"
+  panel: "#1a2332"
+  panel-muted: "#151c28"
+  border: "#2d3a4c"
+  ink: "#e8eef6"
+  sub: "#9aabbd"
+  harbour-signal: "#4b9fe8"
+  harbour-bright: "#6eb4f0"
+  cta: "#2f7fc4"
+  cta-hover: "#2589c9"
+  success-green: "#3dba82"
+  star-gold: "#d4b03a"
 typography:
   display:
     fontFamily: "Newsreader, Source Serif 4, Georgia, Times New Roman, serif"
@@ -210,6 +226,10 @@ MathWise’s interface is a calm, light studio for North Shore parents choosing 
 **The No-Indigo Rule.** Never use Tailwind blue-500/600 (`#3b82f6`, `#2563eb`), indigo, lilac, or violet as gradient partners or path stops.
 
 **The Solid CTA Rule.** Primary buttons are solid Signal + white label. No `from-blue to-indigo` fills.
+
+### Night Path (browser dark)
+
+When `prefers-color-scheme: dark`, the canvas inverts to a cool night studio (`#121820`) with Ink-toned panels (`#1A2332`). Links and prices lift to Harbour Bright for contrast; CTA fills stay Signal + white label. No neon defaults, no purple orbs, no extra accents.
 
 ## Typography
 
