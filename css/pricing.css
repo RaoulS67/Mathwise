@@ -103,8 +103,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--mw-accent);
-  color: var(--mw-panel);
+  background: var(--mw-cta);
+  color: var(--mw-on-accent);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: var(--mw-radius-btn);
@@ -115,7 +115,7 @@
   box-shadow: var(--mw-shadow);
 }
 .pricing-card .btn:hover {
-  background: var(--mw-accent-bright);
+  background: var(--mw-cta-hover);
   transform: translateY(-1px);
 }
 .pricing-card .btn:focus-visible {
@@ -133,6 +133,63 @@
 .footnote .mw-icon {
   color: var(--mw-star);
   margin-right: 4px;
+}
+
+.faq {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  scroll-margin-top: 24px;
+}
+.faq h2 {
+  font-family: var(--mw-font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 24px;
+}
+.faq-item {
+  background: var(--mw-panel);
+  border: 1px solid var(--mw-border);
+  border-radius: 18px;
+  box-shadow: var(--mw-shadow);
+  margin-bottom: 12px;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 18px 22px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  color: var(--mw-text);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  color: var(--mw-accent);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: "–";
+}
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--mw-accent);
+  outline-offset: -4px;
+  border-radius: 18px;
+}
+.faq-item p {
+  padding: 0 22px 20px;
+  color: var(--mw-sub);
+  line-height: 1.7;
+  margin: 0;
 }
 
 .footer {
