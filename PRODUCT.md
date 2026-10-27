@@ -33,7 +33,7 @@ A small, specialised tutoring team whose tutors have recently completed the HSC 
 ## Capabilities and Constraints
 
 - Year bands: Primary Years 3–6; High School Years 7–10; HSC Years 11–12 (including Extension).
-- Pricing (binding): Primary $40 / session; High School $50 / session; HSC $60 / session.
+- Pricing (binding): Primary $50 / session; High School $60 / session; HSC $70 / session.
 - Offers (binding): free diagnostic trial; one lesson free when paying upfront for the term (pay for 9, receive 10); pay-as-you-go also available; no lock-in contracts.
 - Contact (binding): info@mathwise.com.au; 0481 414 923; ABN 29 697 768 294.
 - Stack: existing static HTML/CSS/JS site (no framework).
